@@ -71,20 +71,21 @@ public with sharing class HomeWork1 {
         return Pattern.matches('(^[a-zA-Z]+)([a-rt-zA-RT-Z]+)([Ss]$)', param);
     }
 ///////////////////////////////////////////////////////////////////////////////////////////////
-// 5.
+// 6.
 // List<String> listOfStrings = new List<String>{'str','String','Nostradamus','Astronaute','Bystritz','Boostr'};
 // System.debug( HomeWork1.hasMatchInEveryRow(listOfStrings,'str') );
 //
-//List<String> listOfStrings = new List<String>{'str','String','Nostradamus','Astronaute','Bystritz','Boostr'};
+//List<String> listOfStrings = new List<String>{'str','String','Nostradamus','Astronaute','Bystritz','ABbstr'};
 //System.debug( HomeWork1.hasMatchInEveryRow(listOfStrings,'ABb') );
 // ...
     public static Boolean hasMatchInEveryRow(List <String> param1, String param2){
-        Integer zeroIfMatch;
+        Integer zeroIfMatchAll = 0;
         for ( String str : param1){
-            zeroIfMatch = str.contains(param2) == true ? 0 : 1;
+            zeroIfMatchAll += str.toUpperCase().contains(param2.toUpperCase()) == true ? 0 : 1;
             
         }
-        return zeroIfMatch == 0 ? true : false;
+        System.debug(zeroIfMatchAll);
+        return zeroIfMatchAll == 0 ? true : false;
     }
 
 }
