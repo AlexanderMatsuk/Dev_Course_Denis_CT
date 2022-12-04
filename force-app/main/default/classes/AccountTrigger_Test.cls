@@ -5,7 +5,7 @@ private class AccountTrigger_Test {
         // Create 200 new Accounts
         List<Account> accts = new List<Account>();
         for(Integer i=0; i < 200; i++) {
-            Account acct = new Account(Name='udemy Test Account ' + i);
+            Account acct = new Account(Name='Udemy Test Account ' + i);
             accts.add(acct);
         }              
         // Perform Test
