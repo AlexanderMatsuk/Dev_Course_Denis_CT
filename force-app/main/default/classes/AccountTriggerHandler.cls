@@ -1,7 +1,7 @@
 public with sharing class AccountTriggerHandler {
     public static void handleBeforeInsert (List<Account> accList) {
         for(Account a : accList) {
-            a.Description = 'New description';
+            a.Description = 'New description from Trigger';
         }
     }
      public static void handleAfterInsert (List<Account> accList) {
