@@ -1,7 +1,7 @@
 @isTest
 public with sharing class AccountTriggerHandlerTest {
     @isTest public static void testInsert(){
-        List<Account> myAcc = TestDataFactory.GenerateAccounts(10);
+        List<Account> myAcc = TestDataFactory.GenerateAccounts(200);
         test.startTest();
         insert myAcc;
         test.stopTest();
